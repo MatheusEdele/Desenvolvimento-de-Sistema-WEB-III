@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Editar Usuário</h1>
+        <form action="AtualizarServlet" method="post">
+            <input type="hidden" name="id" value="${usuario.id}">
+            <input type="text" name="nome" placeholder="Nome Completo" value="${usuario.nome}" required>
+            <input type="email" name="email" placeholder="E-mail" value="${usuario.email}" required>
+            <input type="tel" name="telefone" placeholder="Telefone" value="${usuario.telefone}" required>
+            <button type="submit">Atualizar</button>
+        </form>
+    </div>
+</body>
+</html>
