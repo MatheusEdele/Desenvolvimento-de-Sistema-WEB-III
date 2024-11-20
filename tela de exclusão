@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluir Usuário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: center;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .cancel {
+            background-color: #ddd;
+            color: #333;
+        }
+        .cancel:hover {
+            background-color: #ccc;
+        }
+        .delete {
+            background-color: #dc3545;
+            color: white;
+        }
+        .delete:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Confirmar Exclusão</h1>
+        <p>Tem certeza de que deseja excluir o usuário <strong>${usuario.nome}</strong>?</p>
+        <form action="ExcluirServlet" method="post">
+            <input type="hidden" name="id" value="${usuario.id}">
+            <div class="actions">
+                <button type="button" class="cancel" onclick="window.location.href='ConsultaServlet'">Cancelar</button>
+                <button type="submit" class="delete">Excluir</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
