@@ -1,0 +1,5 @@
+-- Consulta todos os usuários
+SELECT * FROM usuarios;
+
+-- Consulta um usuário específico por ID
+SELECT * FROM usuarios WHERE id = 1;
