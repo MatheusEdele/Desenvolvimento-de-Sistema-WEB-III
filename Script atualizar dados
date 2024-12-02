@@ -1,0 +1,4 @@
+-- Atualiza o nome e telefone de um usuário
+UPDATE usuarios 
+SET nome = 'João Pedro Silva', telefone = '(11) 98765-0000'
+WHERE id = 1;
