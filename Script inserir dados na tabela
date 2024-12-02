@@ -1,0 +1,6 @@
+-- Inserção de transações para o usuário
+INSERT INTO transacoes (usuario_id, descricao, valor)
+VALUES 
+    (2, 'Compra de materiais', -150.00),
+    (2, 'Recebimento de salário', 2000.00),
+    (3, 'Pagamento de dívida', -500.00);
