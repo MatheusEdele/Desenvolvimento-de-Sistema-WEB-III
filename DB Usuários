@@ -1,0 +1,15 @@
+CREATE DATABASE ajuda_financeira;
+
+-- Selecionar o banco criado
+USE ajuda_financeira;
+
+-- Criação da tabela `usuarios`
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,       -- Identificador único
+    nome VARCHAR(100) NOT NULL,              -- Nome completo do usuário
+    email VARCHAR(100) NOT NULL UNIQUE,      -- Email (único)
+    telefone VARCHAR(20),                    -- Telefone do usuário
+    senha VARCHAR(255) NOT NULL,             -- Senha para login
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Data de criação do registro
+    data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP -- Última atualização
+);
