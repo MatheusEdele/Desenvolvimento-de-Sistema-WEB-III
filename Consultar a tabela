@@ -1,0 +1,10 @@
+-- Consulta todas as transações de um usuário
+SELECT * 
+FROM transacoes
+WHERE usuario_id = 2;
+
+-- Consulta usuários com transações e total de valores
+SELECT u.nome, SUM(t.valor) AS saldo
+FROM usuarios u
+LEFT JOIN transacoes t ON u.id = t.usuario_id
+GROUP BY u.id;
