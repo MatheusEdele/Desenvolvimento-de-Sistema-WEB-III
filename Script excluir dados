@@ -1,0 +1,5 @@
+-- Exclui um usuário pelo ID
+DELETE FROM usuarios WHERE id = 1;
+
+-- Verifica a tabela após exclusão
+SELECT * FROM usuarios;
